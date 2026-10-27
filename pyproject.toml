@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dgumov-noisylabel"
+version = "0.1.0"
+description = "依据模型置信度与样本难度的一致性筛出可疑标签，标出分组"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "dgumov" }]
+keywords = ["ai", "llm", "cli", "analysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://dgumov.github.io"
+Repository = "https://github.com/dgumov/noisylabel"
+Issues = "https://github.com/dgumov/noisylabel/issues"
+
+[project.scripts]
+noisylabel = "noisylabel:main"
+
+[tool.setuptools]
+py-modules = ["noisylabel"]
